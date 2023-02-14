@@ -1,1 +1,3 @@
 # Virtual-eSports-Coach
+
+We will be designing a program that allows competitive gamers to improve their skills at various popular titles, such as VALORANT, Overwatch 2, Fortnite and more. Users will be able to input their username and platform and the program will retrieve their statistics, analyze which statistics need the most improvement, and offer advice and mentorship to help them improve. It will integrate courses, practice routines, and tips to advance the player’s skills to a higher level. Basically the goal of this program is to help casual gamers transition into a more competitive basis by functioning as a virtual esports coach that plans out customized training according to the player’s stats.
