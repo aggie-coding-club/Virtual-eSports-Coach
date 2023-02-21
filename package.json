@@ -36,13 +36,22 @@
   },
   "homepage": "https://github.com/davidsaulrodriguez/mern-stack-template#readme",
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "axios": "^0.21.1",
+    "bootstrap": "^5.2.3",
     "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.2"
+    "mongoose": "^5.12.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "^0.71.3",
+    "react-router": "^6.8.1",
+    "react-router-dom": "^6.8.1",
+    "router-dom": "^2.2.10"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",

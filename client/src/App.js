@@ -1,39 +1,26 @@
-import logo from './logo.svg';
+//import logo from './vallogo.png';
+import React from 'react'
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Home from './pages/home'
+import Stats from './pages/stats'
+import Register from './pages/register'
+import Users from './pages/users'
+import Navbar from './sections/navbar'
 
 function App() {
-  const rows = [];
-  for (let i = 1; i <= 100; i += 10) {
-    const cells = [];
-    for (let j = i; j <= i + 9; j++) {
-      if (j <= 100) {
-        cells.push(<td key={j}>{j}</td>);
-      } else {
-        cells.push(<td key={j}></td>);
-      }
-    }
-    rows.push(<tr key={i}>{cells}</tr>);
-  }
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <table>
-      <tbody>{rows}</tbody>
-    </table>
-      </header>
+    <div>
+      <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/users" element={<Users />} />
+      </Routes>
+      </Router>
     </div>
   );
 }

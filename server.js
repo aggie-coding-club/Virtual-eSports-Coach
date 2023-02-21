@@ -1,22 +1,22 @@
 const express = require('express');
 const server = express();
-const routes = require('./routes');
+const cors = require('cors')
 const PORT = process.env.PORT || 3001;
 const mongoose = require('mongoose');
+require('dotenv/config')
 
 server.use(
   express.urlencoded({
     extended: true,
   })
 );
+server.use(cors())
 server.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static('client/build'));
 }
 
-// Add routes, both API and view
-server.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mst', {
@@ -25,6 +25,11 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mst', {
   useFindAndModify: false,
   useCreateIndex: true,
 });
+const connection = mongoose.connection;
+connection.once('open',()=>{console.log('mongo connected!')})
+console.log(process.env.MONGODB_URI)
+const usersRouter = require('./routes/users')
+server.use('/users',usersRouter)
 
 // Start the API server
 server.listen(PORT, (err) => {
