@@ -7,8 +7,7 @@ export default class Home extends Component {
     return (
       <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          Welcome to Valorant Helper
+          Welcome to Virtual eSports Coach
         </header>
         </div>
     )
