@@ -25,17 +25,15 @@ export default class Register extends Component {
           })
           
       }
-    
       onChangeID(e) {
         this.setState({
           id: e.target.value
         })
       }
-    
       onSubmit(e) {
         e.preventDefault();
         axios.delete(`http://localhost:3001/users/${this.state.id}`)
-          .then(res => console.log('deleted')).then(this.refresh());
+          .then(() => console.log('deleted')).then(this.refresh());
       }
       
   render() {
@@ -49,13 +47,13 @@ export default class Register extends Component {
         <h3>Delete User</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>ID: </label>
+            <label>ID: 
             <input  type="text"
                 required
                 className="form-control"
                 value={this.state.id}
                 onChange={this.onChangeID}
-                />
+                /></label>
           </div>
           <div className="form-group">
             <input type="submit" value="Delete User" className="btn btn-primary" />
