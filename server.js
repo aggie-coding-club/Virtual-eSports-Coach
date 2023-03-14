@@ -3,7 +3,7 @@ const server = express();
 const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose');
-const app = require('./express/server');
+const app = require('./test');
 
 require('dotenv/config')
 
@@ -30,4 +30,4 @@ server.use('/users',usersRouter)
 
 // Start the API server
 
-app.listen(3000, () => console.log('Local app listening on port 3000!'));
+app.listen(3001, () => console.log('Local app listening on port 3000!'));
