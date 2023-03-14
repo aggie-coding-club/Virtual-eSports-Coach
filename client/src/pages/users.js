@@ -15,6 +15,7 @@ export default class Register extends Component {
         window.location.reload()
       }
       componentDidMount() {
+        console.log(`${window.location.hostname}/users/`)
         axios.get(`${window.location.hostname}/users/`)
           .then(response => {
             this.setState({ data: response.data })
