@@ -19,12 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mst', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-});
+mongoose.connect(process.env.MONGODB_URI);
 const connection = mongoose.connection;
 connection.once('open',()=>{console.log('mongo connected!')})
 console.log(process.env.MONGODB_URI)
