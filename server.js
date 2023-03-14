@@ -3,6 +3,8 @@ const server = express();
 const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose');
+const app = require('./express/server');
+
 require('dotenv/config')
 
 server.use(
@@ -27,11 +29,5 @@ const usersRouter = require('./routes/users')
 server.use('/users',usersRouter)
 
 // Start the API server
-server.listen(PORT, (err) => {
-  // eslint-disable-next-line no-console
-  if (err) console.log(err);
-  // eslint-disable-next-line no-console
-  console.log(
-    `Server is listening at: ${PORT} - Click Here => http://localhost:${PORT}`
-  );
-});
+
+app.listen(3000, () => console.log('Local app listening on port 3000!'));
