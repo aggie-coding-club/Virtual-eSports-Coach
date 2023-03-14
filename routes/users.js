@@ -1,6 +1,3 @@
-const express = require('express');
-const serverless = require('serverless-http');
-const app = express();
 const bodyParser = require('body-parser');
 const router = require('express').Router();
 let User = require('../schemas/users');
@@ -10,7 +7,6 @@ router.route('/').get((req, res) => {
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 });
-app.use(bodyParser);
 router.route('/add').post((req, res) => {
   const username = req.body.username;
 
@@ -45,4 +41,4 @@ router.route('/:id').get((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
-module.exports.handler = serverless(router);
+module.exports = router;
