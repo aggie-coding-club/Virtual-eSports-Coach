@@ -29,7 +29,7 @@ export default class Register extends Component {
     console.log(user);
 
     
-    axios.post('http://localhost:8080/users/add', user)
+    axios.post(`{window.location.hostname}/users/add`, user)
       .then(res => console.log(res.data));
   
 
