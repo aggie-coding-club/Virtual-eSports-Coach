@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb+srv://chrislinkou:dtimBW5mijU5spyG@vec-db.46azzw5.mongodb.net/?retryWrites=true&w=majority" || 'mongodb://localhost/mst', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mst', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
