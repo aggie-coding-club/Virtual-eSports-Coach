@@ -15,7 +15,7 @@ export default class Register extends Component {
         window.location.reload()
       }
       componentDidMount() {
-        axios.get('http://localhost:3001/users/')
+        axios.get('http://localhost:8080/users/')
           .then(response => {
             this.setState({ data: response.data })
             console.log(this.List())
@@ -32,7 +32,7 @@ export default class Register extends Component {
       }
       onSubmit(e) {
         e.preventDefault();
-        axios.delete(`http://localhost:3001/users/${this.state.id}`)
+        axios.delete(`http://localhost:8080/users/${this.state.id}`)
           .then(() => console.log('deleted')).then(this.refresh());
       }
       
