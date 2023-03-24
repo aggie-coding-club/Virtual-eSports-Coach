@@ -29,7 +29,7 @@ export default class Register extends Component {
     console.log(user);
 
     
-    axios.post('http://localhost:3001/users/add', user)
+    axios.post(`{window.location.hostname}/users/add`, user)
       .then(res => console.log(res.data));
   
 
@@ -44,13 +44,13 @@ export default class Register extends Component {
         <h3>Create New User</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>Username: </label>
+            <label>Username:
             <input  type="text"
                 required
                 className="form-control"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
-                />
+                /> </label>
           </div>
           <div className="form-group">
             <input type="submit" value="Create User" className="btn btn-primary" />

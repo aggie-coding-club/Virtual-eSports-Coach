@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser');
 const router = require('express').Router();
 let User = require('../schemas/users');
 
@@ -6,7 +7,6 @@ router.route('/').get((req, res) => {
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 });
-
 router.route('/add').post((req, res) => {
   const username = req.body.username;
 
