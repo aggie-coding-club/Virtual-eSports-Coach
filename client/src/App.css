@@ -1,39 +1,100 @@
-.App {
-  text-align: center;
+/* General website formatting */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: var(--color-bg)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+/* The gradient background used in the Navbar and Header */
+.gradient__bg {
+
+  /* ff 3.6+ */
+  background:-moz-radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);
+
+}
+
+/* Formatting for the gradient text */
+.gradient__text {
+  background:var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation */
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Courier", serif;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Basic website formatting */
+.section__padding {
+  padding: 4rem 6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.section__margin {
+  margin: 4rem 6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Display settings for smaller devices */
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
   }
-  to {
-    transform: rotate(360deg);
+  .section_margin {
+    margin: 4rem;
+  }
+}
+
+/* Display settings for mobile devices */
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .section_margin {
+    margin: 4rem 2rem;
   }
 }
