@@ -19,3 +19,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Thomas's React code */
+
+:root {
+  --font-family: 'Roboto Mono', monospace;
+
+  --gradient-text: radial-gradient(ellipse farthest-side at top left, #2ECEFF 0%, #0071C7 50%, #B92ECF 100%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+
+  --color-bg: #2C2F33;
+  --color-footer: #000000;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+}
