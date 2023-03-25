@@ -89,14 +89,15 @@
 
 /* Big Gekko image formatting */
 .vec__header-image {
-    flex: 0.5;
+    flex: 1;
+    transform: scale(0.8);
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 
 /* Support for smaller displays */
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1500px) {
     .vec__header {
         flex-direction: column;
     }
