@@ -15,8 +15,9 @@
     align-items: center;
 }
 
-.vec__navbar-links_logo {
-    margin-right: 4rem;
+.vec__navbar-links-logo {
+    margin-right: 1.5rem;
+    cursor: pointer;
 }
 
 .vec__navbar-links-logo img {
