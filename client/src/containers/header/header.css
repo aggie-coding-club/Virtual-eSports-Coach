@@ -97,7 +97,7 @@
 }
 
 /* Support for smaller displays */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1200px) {
     .vec__header {
         flex-direction: column;
     }
