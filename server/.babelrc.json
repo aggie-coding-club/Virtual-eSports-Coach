@@ -1,5 +1,0 @@
-{
-  "parserOpts": {
-    "plugins": ["@babel/plugin-syntax-jsx", "module:@babel/preset-react"]
-  }
-}
