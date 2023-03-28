@@ -30,7 +30,7 @@ class Register extends Component{
     console.log(user);
 
     
-    axios.post(`{window.location.hostname}/users/add`, user)
+    axios.post(`https://vec.onrender.com/users/add`, user)
       .then(res => console.log(res.data));
   
 
