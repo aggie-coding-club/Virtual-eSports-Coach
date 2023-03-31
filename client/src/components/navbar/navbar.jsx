@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="navbar-links">
 
                 {/* Logo (left on the navbar) */}
-                <div className="vec__navbar-links-logo">
+                <div className="navbar-links-logo">
                     <a href = "/">
                     <img src={logo} alt="logo" />
                     </a>
