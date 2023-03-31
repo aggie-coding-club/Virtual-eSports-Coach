@@ -1,27 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-table tbody tr td {
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(255, 255, 255);
-}
-table{
-  border-collapse: collapse;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Thomas's React code */
-
 :root {
   --font-family: 'Roboto Mono', monospace;
 
@@ -31,6 +7,6 @@ code {
   --color-bg: #2C2F33;
   --color-footer: #000000;
   --color-blog: #042c54;
-  --color-text: #81AFDD;
+  --color-text: #c6e3ff;
   --color-subtext: #FF8A71;
 }

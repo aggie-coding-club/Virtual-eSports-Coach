@@ -5,9 +5,8 @@ import logo from '../../assets/logo.png';
 
 const Menu = () => (
     <>
-        <p><a href="#home">Home</a></p>
-        <p><a href="#aboutus">About Us</a></p>
-        <p><a href="register">Register</a></p>
+        <p><a href="/">Home</a></p>
+        <p><a href="aboutus">About Us</a></p>
     </>
 )
 
@@ -16,39 +15,41 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <div className="vec__navbar">
+        <div className="navbar">
 
             {/* Navbar subsections and linking */}
-            <div className="vec__navbar-links">
+            <div className="navbar-links">
 
                 {/* Logo (left on the navbar) */}
-                <div className="vec__navbar-links-logo">
+                <div className="navbar-links-logo">
+                    <a href = "/">
                     <img src={logo} alt="logo" />
+                    </a>
                 </div>
 
                 {/* Menu (this object is created earlier)*/}
-                <div className="vec__navbar-links_container">
+                <div className="navbar-links_container">
                     <Menu />
                 </div>
             </div>
 
             {/* Sign in and sign up buttons */}
-            <div className="vec__navbar-sign">
+            <div className="navbar-sign">
                 <p>Sign in</p>
-                <button type="button">Sign up</button>
+                <a href='register'><button type="button">Sign up</button></a>
             </div>
 
             {/* Menu for smaller devices */}
-            <div className="vec__navbar-menu">
+            <div className="navbar-menu">
                 {toggleMenu
                     ? <RiCloseLine color="fff" size={27} onClick={() => setToggleMenu(false)} />
                     : <RiMenu3Line color="fff" size={27} onClick={() => setToggleMenu(true)} />}
                 {toggleMenu && (
-                    <div className="vec__navbar-menu_container scale-up-center">
-                        <div className="vec__navbar-menu_container-links">
+                    <div className="navbar-menu_container scale-up-center">
+                        <div className="navbar-menu_container-links">
                             <Menu />
                         </div>
-                        <div className="vec__navbar-menu_container-links-sign">
+                        <div className="navbar-menu_container-links-sign">
                             <p>Sign in</p>
                             <button type="button">Sign up</button>
                         </div>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Register extends Component {
+
+class Register extends Component{
   constructor(props) {
     super(props);
 
@@ -29,7 +30,7 @@ export default class Register extends Component {
     console.log(user);
 
     
-    axios.post(`{window.location.hostname}/users/add`, user)
+    axios.post(`https://vec.onrender.com/users/add`, user)
       .then(res => console.log(res.data));
   
 
@@ -41,7 +42,7 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <h3>Create New Users</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username:
@@ -60,3 +61,5 @@ export default class Register extends Component {
     )
   }
 }
+
+export default Register;
