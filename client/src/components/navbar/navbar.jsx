@@ -5,9 +5,8 @@ import logo from '../../assets/logo.png';
 
 const Menu = () => (
     <>
-        <p><a href="home">Home</a></p>
+        <p><a href="/">Home</a></p>
         <p><a href="aboutus">About Us</a></p>
-        <p><a href="register">Register</a></p>
     </>
 )
 
@@ -23,7 +22,9 @@ const Navbar = () => {
 
                 {/* Logo (left on the navbar) */}
                 <div className="vec__navbar-links-logo">
+                    <a href = "/">
                     <img src={logo} alt="logo" />
+                    </a>
                 </div>
 
                 {/* Menu (this object is created earlier)*/}
@@ -35,7 +36,7 @@ const Navbar = () => {
             {/* Sign in and sign up buttons */}
             <div className="navbar-sign">
                 <p>Sign in</p>
-                <button type="button">Sign up</button>
+                <a href='register'><button type="button">Sign up</button></a>
             </div>
 
             {/* Menu for smaller devices */}
