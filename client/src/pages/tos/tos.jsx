@@ -3,7 +3,7 @@ import {Navbar} from "../../components";
 
 const ToS = () => {
     return (
-        <div className="vec__tos">
+        <div className="tos">
             <h1>Website Terms and Conditions of Use</h1>
 
             <h2>1. Terms</h2>
@@ -57,9 +57,8 @@ const ToS = () => {
 
 const ToSSite = () => {
     return (
-        <div className="vec__tos-site">
+        <div className="tos-site">
             <div className="gradient__bg">
-                <Navbar />
                 <ToS />
             </div>
         </div>

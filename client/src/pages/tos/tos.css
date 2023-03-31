@@ -1,3 +1,15 @@
-h2{
- color:azure
-}
+.tos h1 {
+    color: white;
+  }
+  
+  .tos h2 {
+    color: white;
+  }
+  
+  .tos p {
+    color: white;
+  }
+  
+  .tos li {
+    color: white;
+  }

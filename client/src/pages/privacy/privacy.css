@@ -1,7 +1,15 @@
-.privacy {
-    color: whitesmoke;
-  }
+.privacy h1 {
+  color: white;
+}
 
-.privacy-site {
-    color:whitesmoke;
+.privacy h2 {
+  color: white;
+}
+
+.privacy p {
+  color: white;
+}
+
+.privacy li {
+  color: white;
 }
