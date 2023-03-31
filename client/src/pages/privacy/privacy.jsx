@@ -1,5 +1,4 @@
 import React from 'react';
-import {Navbar} from "../../components";
 
 const Privacy = () => {
     return (
@@ -193,11 +192,8 @@ const Privacy = () => {
 
 const PrivacySite = () => {
     return (
-        <div className="vec__privacy-site">
-            <div className="gradient__bg">
-                <Navbar />
-                <Privacy />
-            </div>
+        <div className="privacy-site">
+             <Privacy />
         </div>
     )
 }
