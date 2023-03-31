@@ -4,7 +4,7 @@ import {Header} from "../../containers";
 
 const Dashboard = () => {
   return (
-      <div className="App">
+      <div >
         <h1>DASHBOARD</h1>
       </div>
   )
