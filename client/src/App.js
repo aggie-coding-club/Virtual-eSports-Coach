@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Home,Register,ToS,Privacy } from "./pages";
+import { Home,Register,ToS,Privacy, Dashboard } from "./pages";
 import { Navbar } from './components';
 /*
 When it's time, we can do:
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="aboutus" element={<Home />} />
           <Route path="register" element={<Register />} />
           <Route path="tos" element={<ToS />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="privacy" element={<Privacy />} />
         </Route>
       </Routes>
