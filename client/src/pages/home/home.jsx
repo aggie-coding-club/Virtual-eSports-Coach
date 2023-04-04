@@ -7,8 +7,8 @@ const Home = () => {
   return (
       <div className="App">
         <div className="gradient__bg">
-        <ParallaxImg/>
         <HomeTitle />
+        <ParallaxImg/>
         </div>
       </div>
   )
