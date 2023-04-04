@@ -1,13 +1,10 @@
 .footer {
     border: 1px solid whitesmoke;
     color: white;
-
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
-    background: var(--color-footer);
 }
 
 .footer-heading {
