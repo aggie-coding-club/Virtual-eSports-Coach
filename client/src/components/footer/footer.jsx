@@ -25,9 +25,9 @@ const Company = () => (
 )
 
 const Footer = () => {
-
+    
     return (
-        <div className="footer section__padding">
+        <div className="footer section__padding" >
             <div>
                 <div className="footer-heading">
                     <h2>Footer example text</h2>
