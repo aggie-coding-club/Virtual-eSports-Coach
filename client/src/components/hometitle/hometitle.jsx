@@ -1,29 +1,17 @@
 import React from 'react';
-import './header.css';
+import './style.css';
 import glass from "../../assets/searchglass.png";
-import headerimage from "../../assets/test.png";
 import { useGlitch } from 'react-powerglitch'
 import { ParallaxProvider,useParallax, Parallax} from 'react-scroll-parallax';
 
 
-const Header = () => {
+const HomeTitle = () => {
     const glitch = useGlitch();
     const { rotateanimation }  = useParallax<HTMLDivElement>({
         rotate: [0, 360],
       });
     return (
-        <div ref={glitch.ref}>
-        <div className="vec__header section__padding" id="home">
-            {/* Big Gekko image */}
-            <div style={{marginTop : 200}}> 
-            <Parallax speed={100} translateX={['2000px', '-2000px']} >
-            <div className="vec__header-image">
-                <img src={headerimage} alt="headerimage" />
-            </div>
-            </Parallax>
-            </div>
-        </div>
-        <div className="vec__header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
+        <div ref={glitch.ref}className="vec__header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
             <Parallax speed={10}>
             <div className="vec__header-content" >
 
@@ -47,8 +35,7 @@ const Header = () => {
             </div>
             </Parallax>
         </div>
-        </div>
     );
 }
 
-export default Header
+export default HomeTitle
