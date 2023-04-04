@@ -11,11 +11,7 @@ const HomeTitle = () => {
         rotate: [0, 360],
       });
     return (
-<<<<<<< Updated upstream
-        <div ref={glitch.ref}className="header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
-=======
         <div className="vec__header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
->>>>>>> Stashed changes
             <Parallax speed={10}>
             <div className="header-content" >
 
