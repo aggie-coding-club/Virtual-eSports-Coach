@@ -34,6 +34,7 @@ const App = () => {
       <Footer />
     </div>*/}
     </Router>
+    <Footer />
     </ParallaxProvider>
     )
 }
