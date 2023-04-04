@@ -12,8 +12,8 @@ const Menu = () => (
 const Info = () => (
     <>
         <h4>Information</h4>
-        <p><a href="/">Privacy Policy</a></p>
-        <p><a href="aboutus">Terms of Service</a></p>
+        <p><a href="privacy">Privacy Policy</a></p>
+        <p><a href="tos">Terms of Service</a></p>
     </>
 )
 
