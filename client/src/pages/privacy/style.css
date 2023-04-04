@@ -1,9 +1,16 @@
 .privacy h1 {
   color: white;
+  font-size: xx-large;
 }
 
 .privacy h2 {
   color: white;
+  font-size: larger;
+}
+
+.privacy h3 {
+  color: white;
+  font-size: medium;
 }
 
 .privacy p {
@@ -12,4 +19,8 @@
 
 .privacy li {
   color: white;
+}
+
+.privacy{
+  padding: 100px 200px 100px 200px
 }

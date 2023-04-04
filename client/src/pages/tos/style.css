@@ -1,15 +1,26 @@
 .tos h1 {
-    color: white;
-  }
-  
-  .tos h2 {
-    color: white;
-  }
-  
-  .tos p {
-    color: white;
-  }
-  
-  .tos li {
-    color: white;
-  }
+  color: white;
+  font-size: xx-large;
+}
+
+.tos h2 {
+  color: white;
+  font-size: larger;
+}
+
+.tos h3 {
+  color: white;
+  font-size: medium;
+}
+
+.tos p {
+  color: white;
+}
+
+.tos li {
+  color: white;
+}
+
+.tos{
+  padding: 100px 200px 100px 200px
+}
