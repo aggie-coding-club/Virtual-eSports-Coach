@@ -1,0 +1,29 @@
+.footer {
+    border: 1px solid whitesmoke;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--color-footer);
+}
+
+.footer-heading {
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.footer-links_logo img {
+    width: 100px
+}
+
+.footer-heading h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: -0.04em;
+}
