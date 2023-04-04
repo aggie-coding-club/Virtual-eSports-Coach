@@ -43,7 +43,7 @@ const HomeTitle = () => {
 
                 {/* Big gradient text */}
                 {/*<GlitchClip duration={"2s"}>*/}
-                <span ref={glitch.ref}><h1 className="gradient__text">Advance to the next level of gaming with Virtual eSports Coach</h1></span>
+                <span ref={glitch.ref}><h1 className="gradient__text">Improve your skills at various competitive shooter titles</h1></span>
                 {/*</GlitchClip>*/}
                 {/* VeC description */}
                 <Steps />
