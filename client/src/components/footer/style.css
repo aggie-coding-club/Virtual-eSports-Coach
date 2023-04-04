@@ -55,6 +55,7 @@
     margin: 1rem;
 }
 
+
 .footer-links_div {
     display: flex;
     justify-content: flex-start;
@@ -63,7 +64,8 @@
 
 .footer-links_div h4 {
     font-family: var(--font-family);
-    font-size: 14px;
+    font-size: 30px;
+    font-weight: bold;
     line-height: 16px;
     margin-bottom: 1rem;
 }
