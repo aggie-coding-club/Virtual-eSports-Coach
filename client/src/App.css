@@ -15,6 +15,14 @@ a {
   text-decoration: none;
 }
 
+/* Formatting for the gradient text */
+.gradient__text {
+  background:var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* The gradient background used in the Navbar and Header */
 .gradient__bg {
 
