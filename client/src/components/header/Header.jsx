@@ -3,16 +3,33 @@ import './header.css';
 import glass from "../../assets/searchglass.png";
 import headerimage from "../../assets/test.png";
 import { useGlitch } from 'react-powerglitch'
+import { ParallaxProvider,useParallax, Parallax} from 'react-scroll-parallax';
+
 
 const Header = () => {
     const glitch = useGlitch();
+    const { rotateanimation }  = useParallax<HTMLDivElement>({
+        rotate: [0, 360],
+      });
     return (
+        <div ref={glitch.ref}>
         <div className="vec__header section__padding" id="home">
-            <div className="vec__header-content">
+            {/* Big Gekko image */}
+            <div style={{marginTop : 200}}> 
+            <Parallax speed={100} translateX={['2000px', '-2000px']} >
+            <div className="vec__header-image">
+                <img src={headerimage} alt="headerimage" />
+            </div>
+            </Parallax>
+            </div>
+        </div>
+        <div className="vec__header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
+            <Parallax speed={10}>
+            <div className="vec__header-content" >
 
                 {/* Big gradient text */}
                 {/*<GlitchClip duration={"2s"}>*/}
-                <span ref={glitch.ref}><h1 className="gradient__text">Improve your skills at various competitive shooter titles</h1></span>
+                <span><h1 className="gradient__text">Improve your skills at various competitive shooter titles</h1></span>
                 {/*</GlitchClip>*/}
                 {/* VeC description */}
                 <p>The primary goal of Virtual eSports Coach is to serve as a website that helps gamers improve their skills in various popular competitive shooter titles, such as VALORANT, Overwatch 2, and more. First, gamers will enter their username, platform, and other information required to identify them. Then, the program will retrieve their statistics, determine which skills need the most improvement, and offer advice and mentorship. By providing customized training, practice routines, and other guidance for each client, Virtual eSports Coach will allow even casual gamers to make significant progress and advance to the next level of gaming.</p>
@@ -28,11 +45,8 @@ const Header = () => {
                 </div>
 
             </div>
-
-            {/* Big Gekko image */}
-            <div className="vec__header-image">
-                <img src={headerimage} alt="headerimage" />
-            </div>
+            </Parallax>
+        </div>
         </div>
     );
 }

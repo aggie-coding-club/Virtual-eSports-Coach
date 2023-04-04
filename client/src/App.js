@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Home,Register,ToS,Privacy, Dashboard } from "./pages";
 import { Navbar } from './components';
+import { ParallaxProvider,useParallax } from 'react-scroll-parallax';
 /*
 When it's time, we can do:
 import { Home, Page1, Page2, Page 3 } from "./pages";
@@ -11,7 +12,9 @@ import { Home, Page1, Page2, Page 3 } from "./pages";
 
 const App = () => {
     return (
+      <ParallaxProvider>
     <Router>
+      
       <div className="gradient__bg">
       <Navbar />
       </div>
@@ -31,6 +34,7 @@ const App = () => {
       <Footer />
     </div>*/}
     </Router>
+    </ParallaxProvider>
     )
 }
 

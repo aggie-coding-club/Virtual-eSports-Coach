@@ -1,7 +1,4 @@
 import React from 'react';
-import {Navbar} from "../../components";
-import {Header} from "../../containers";
-
 const Dashboard = () => {
   return (
       <div >
