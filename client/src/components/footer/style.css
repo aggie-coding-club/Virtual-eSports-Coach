@@ -1,15 +1,12 @@
 .footer {
-    border: 1px solid whitesmoke;
     color: white;
-    display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../../assets/footer.jpg') !important;
-    background-repeat:"no-repeat";
-    background-size:"contain";
     display: flex;
     align-items: center;
+    background-image: url('../../assets/footer.gif')!important;
+    background-position: 'center'!important;
+    background-repeat: 'no-repeat';
 }
 
 .footer-heading {
