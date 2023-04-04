@@ -2,7 +2,6 @@ import React from 'react';
 import './header.css';
 import glass from "../../assets/searchglass.png";
 import headerimage from "../../assets/test.png";
-import GlitchClip from 'react-glitch-effect/core/GlitchClip';
 import { useGlitch } from 'react-powerglitch'
 
 const Header = () => {
