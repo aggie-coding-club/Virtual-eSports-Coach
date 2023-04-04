@@ -1,9 +1,9 @@
-.vec__header {
+.header {
     display: flex;
 }
 
 /* Formatting settings for the entire header object */
-.vec__header-content {
+.header-content {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 /* Big gradient text formatting */
-.vec__header-content h1 {
+.header-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 44px;
@@ -23,16 +23,16 @@
 }
 
 /* Smaller description text formatting */
-.vec__header-content p {
+.header-content p {
     font-family: var(--font-family);
 
-    color: #3982A5;
+    color: var(--color-subtext);
     margin-top: 1.5rem;
     font-size: 20px;
 }
 
 
-.vec__header-username__input {
+.header-username__input {
     width: 100%;
     margin: 2rem 0 1rem;
 
@@ -40,7 +40,7 @@
     display: flex;
 }
 
-.vec__header-username__input input {
+.header-username__input input {
     flex: 2;
     width: 100%;
     min-height: 50px;
@@ -63,7 +63,7 @@
     padding: 0 1rem;
 }
 
-.vec__header-username__input button {
+.header-username__input button {
     flex: 0.6;
     width: 100%;
     min-height: 50px;
@@ -83,12 +83,12 @@
 }
 
 /* Searchglass size in pixels */
-.vec__header-username__input img {
+.header-username__input img {
     width: 30px;
 }
 
 /* Big Gekko image formatting */
-.vec__header-image {
+.header-image {
     flex: 1;
     transform: scale(0.8);
     display: flex;
@@ -97,7 +97,7 @@
 }
 
 /* Support for smaller displays */
-.vec__header h1 {
+.header h1 {
         flex-direction: column;
         font-size: 4px;
         line-height: 60px;
@@ -105,52 +105,52 @@
 
 
 @media screen and (max-width: 1200px) {
-    .vec__header {
+    .header {
         flex-direction: column;
     }
 
-    .vec__header-content {
+    .header-content {
         margin: 0 0 3rem;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .vec__header h1 {
+    .header h1 {
         flex-direction: column;
         font-size: 40px;
         line-height: 60px;
     }
 
-    .vec__header-content {
+    .header-content {
         margin: 0 0 3rem;
     }
 
-    .vec__header p {
+    .header p {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .vec__header-content_input input,
-    .vec__header-content_input button {
+    .header-content_input input,
+    .header-content_input button {
         font-size: 16px;
         line-height: 24px;
     }
 }
 
 @media screen and (max-width: 490px) {
-    .vec__header h1 {
+    .header h1 {
         flex-direction: column;
         font-size: 32px;
         line-height: 48px;
     }
 
-    .vec__header p {
+    .header p {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .vec__header-content_input input,
-    .vec__header-content_input button {
+    .header-content_input input,
+    .header-content_input button {
         font-size: 12px;
         line-height: 16px;
     }

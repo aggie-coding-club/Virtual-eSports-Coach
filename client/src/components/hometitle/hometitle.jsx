@@ -11,9 +11,9 @@ const HomeTitle = () => {
         rotate: [0, 360],
       });
     return (
-        <div ref={glitch.ref}className="vec__header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
+        <div ref={glitch.ref}className="header section__padding" id="home" style={{marginTop : -950, paddingBottom:1000}}>
             <Parallax speed={10}>
-            <div className="vec__header-content" >
+            <div className="header-content" >
 
                 {/* Big gradient text */}
                 {/*<GlitchClip duration={"2s"}>*/}
