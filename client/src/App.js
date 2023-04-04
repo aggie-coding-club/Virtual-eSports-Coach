@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Home,Register,ToS,Privacy, Dashboard } from "./pages";
-import { Navbar } from './components';
+import { Navbar,Footer } from './components';
 import { ParallaxProvider,useParallax } from 'react-scroll-parallax';
 /*
 When it's time, we can do:
