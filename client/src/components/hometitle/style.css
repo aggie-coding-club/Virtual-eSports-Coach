@@ -1,9 +1,9 @@
-.header {
+.hometitle {
     display: flex;
 }
 
 /* Formatting settings for the entire header object */
-.header-content {
+.hometitle-content {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 /* Big gradient text formatting */
-.header-content h1 {
+.hometitle-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 44px;
@@ -23,7 +23,7 @@
 }
 
 /* Smaller description text formatting */
-.header-content p {
+.hometitle-content p {
     font-family: var(--font-family);
 
     color: var(--color-subtext);
@@ -32,7 +32,7 @@
 }
 
 
-.header-username__input {
+.hometitle-username__input {
     width: 100%;
     margin: 2rem 0 1rem;
 
@@ -40,7 +40,7 @@
     display: flex;
 }
 
-.header-username__input input {
+.hometitle-username__input input {
     flex: 2;
     width: 100%;
     min-height: 50px;
@@ -63,7 +63,7 @@
     padding: 0 1rem;
 }
 
-.header-username__input button {
+.hometitle-username__input button {
     flex: 0.6;
     width: 100%;
     min-height: 50px;
@@ -83,12 +83,12 @@
 }
 
 /* Searchglass size in pixels */
-.header-username__input img {
+.hometitle-username__input img {
     width: 30px;
 }
 
 /* Big Gekko image formatting */
-.header-image {
+.hometitle-image {
     flex: 1;
     transform: scale(0.8);
     display: flex;
@@ -97,7 +97,7 @@
 }
 
 /* Support for smaller displays */
-.header h1 {
+.hometitle h1 {
         flex-direction: column;
         font-size: 4px;
         line-height: 60px;
@@ -105,52 +105,52 @@
 
 
 @media screen and (max-width: 1200px) {
-    .header {
+    .hometitle {
         flex-direction: column;
     }
 
-    .header-content {
+    .hometitle-content {
         margin: 0 0 3rem;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .header h1 {
+    .hometitle h1 {
         flex-direction: column;
         font-size: 40px;
         line-height: 60px;
     }
 
-    .header-content {
+    .hometitle-content {
         margin: 0 0 3rem;
     }
 
-    .header p {
+    .hometitle p {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .header-content_input input,
-    .header-content_input button {
+    .hometitle-content_input input,
+    .hometitle-content_input button {
         font-size: 16px;
         line-height: 24px;
     }
 }
 
 @media screen and (max-width: 490px) {
-    .header h1 {
+    .hometitle h1 {
         flex-direction: column;
         font-size: 32px;
         line-height: 48px;
     }
 
-    .header p {
+    .hometitle p {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .header-content_input input,
-    .header-content_input button {
+    .hometitle-content_input input,
+    .hometitle-content_input button {
         font-size: 12px;
         line-height: 16px;
     }

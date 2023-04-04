@@ -17,8 +17,15 @@
     text-align: center;
     font-family: var(--font-family);
     font-size: 200px;
-
     margin-bottom: 3rem;
+}
+
+/* Formatting for the gradient text */
+.gradient__text {
+    background:var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-links_logo img {
