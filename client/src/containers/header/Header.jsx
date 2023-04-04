@@ -2,15 +2,19 @@ import React from 'react';
 import './header.css';
 import glass from "../../assets/searchglass.png";
 import headerimage from "../../assets/test.png";
+import GlitchClip from 'react-glitch-effect/core/GlitchClip';
+import { useGlitch } from 'react-powerglitch'
 
 const Header = () => {
+    const glitch = useGlitch();
     return (
         <div className="vec__header section__padding" id="home">
             <div className="vec__header-content">
 
                 {/* Big gradient text */}
-                <h1 className="gradient__text">Improve your skills at various competitive shooter titles</h1>
-
+                {/*<GlitchClip duration={"2s"}>*/}
+                <span ref={glitch.ref}><h1 className="gradient__text">Improve your skills at various competitive shooter titles</h1></span>
+                {/*</GlitchClip>*/}
                 {/* VeC description */}
                 <p>The primary goal of Virtual eSports Coach is to serve as a website that helps gamers improve their skills in various popular competitive shooter titles, such as VALORANT, Overwatch 2, and more. First, gamers will enter their username, platform, and other information required to identify them. Then, the program will retrieve their statistics, determine which skills need the most improvement, and offer advice and mentorship. By providing customized training, practice routines, and other guidance for each client, Virtual eSports Coach will allow even casual gamers to make significant progress and advance to the next level of gaming.</p>
 
