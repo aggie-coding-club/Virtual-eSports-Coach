@@ -4,6 +4,31 @@ import glass from "../../assets/searchglass.png";
 import { useGlitch } from 'react-powerglitch'
 import { ParallaxProvider,useParallax, Parallax} from 'react-scroll-parallax';
 
+const Steps = () => (
+    <>
+        <div className="circles">
+            
+            <div className="circle">
+                <p className="circle-text">1</p>
+            </div>
+
+            <p className="circles.text">Enter your Riot ID</p>
+
+            <div className="circle">
+                <p className="circle-text">2</p>
+            </div>
+
+            <p className="circles.text">Upload a video</p>
+
+             <div className="circle">
+                <p className="circle-text">3</p>
+            </div>
+
+            <p className="circles.text">Get guidance to improve</p>
+
+        </div>
+    </>
+)
 
 const HomeTitle = () => {
     const glitch = useGlitch();
@@ -18,10 +43,10 @@ const HomeTitle = () => {
 
                 {/* Big gradient text */}
                 {/*<GlitchClip duration={"2s"}>*/}
-                <span ref={glitch.ref}><h1 className="gradient__text" >Improve your skills at various competitive shooter titles</h1></span>
+                <span ref={glitch.ref}><h1 className="gradient__text">Advance to the next level of gaming with Virtual eSports Coach</h1></span>
                 {/*</GlitchClip>*/}
                 {/* VeC description */}
-                <p>The primary goal of Virtual eSports Coach is to serve as a website that helps gamers improve their skills in various popular competitive shooter titles, such as VALORANT, Overwatch 2, and more. First, gamers will enter their username, platform, and other information required to identify them. Then, the program will retrieve their statistics, determine which skills need the most improvement, and offer advice and mentorship. By providing customized training, practice routines, and other guidance for each client, Virtual eSports Coach will allow even casual gamers to make significant progress and advance to the next level of gaming.</p>
+                <Steps />
 
                 {/* Username input searchbar */}
                 <div className="hometitle-username__input">
