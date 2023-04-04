@@ -15,9 +15,8 @@ const App = () => {
       <ParallaxProvider>
     <Router>
       
-      <div className="gradient__bg">
+      
       <Navbar />
-      </div>
       <div className="gradient__bg">
       <Routes>
         <Route path="/" /*element={<Layout />}*/>
