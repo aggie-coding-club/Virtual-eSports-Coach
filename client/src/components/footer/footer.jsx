@@ -2,9 +2,29 @@ import React, { useState } from 'react';
 import './style.css';
 import logo from '../../assets/logo.png';
 
+const Menu = () => (
+    <>
+        <h4>Menu</h4>
+        <p><a href="/">Home</a></p>
+    </>
+)
+
+const Info = () => (
+    <>
+        <h4>Information</h4>
+        <p><a href="/">Privacy Policy</a></p>
+        <p><a href="aboutus">Terms of Service</a></p>
+    </>
+)
+
+const Company = () => (
+    <>
+        <h4>Company</h4>
+        <p><a href="aboutus">Contact Us</a></p>
+    </>
+)
+
 const Footer = () => {
-    /* Const is needed to open/close the navbar on smaller devices */
-    const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
         <div className="footer section__padding">
@@ -19,10 +39,21 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-links_div">
-                        <p>Terms of Service</p>
-                        <p>Privacy Policy</p>
+                        <Menu />
                     </div>
 
+                    <div className="footer-links_div">
+                        <Info />
+                    </div>
+
+                    <div className="footer-links_div">
+                        <Company />
+                    </div>
+
+                </div>
+
+                <div className="footer-copyright">
+                    <p>© 2023 Virtual eSports Coach. All rights reserved.</p>
                 </div>
 
             </div>
