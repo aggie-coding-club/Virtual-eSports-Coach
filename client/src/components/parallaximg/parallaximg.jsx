@@ -3,14 +3,14 @@ import './style.css';
 import {useParallax, Parallax} from 'react-scroll-parallax';
 import gekkoimg from '../../assets/test.png'
 
-const ParalaxImg = () => {
+const ParallaxImg = () => {
     return (
-        <div className="vec__header section__padding" id="home">
+        <div className="hometitle section__padding" id="home">
             {/* Big Gekko image */}
             <div style={{marginTop : 200}}> 
             <Parallax speed={100}  >{/*translateX={['2000px', '-2000px']}*/}
-            <div className="vec__header-image">
-                <img src={gekkoimg } alt="headerimage" />
+            <div className="hometitle-image">
+                <img src={gekkoimg} alt="headerimage" />
             </div>
             </Parallax>
             </div>
@@ -18,4 +18,4 @@ const ParalaxImg = () => {
     );
 }
 
-export default ParalaxImg
+export default ParallaxImg
