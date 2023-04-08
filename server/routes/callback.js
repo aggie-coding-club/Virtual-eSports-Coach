@@ -8,6 +8,7 @@ const router = require('express').Router();
   });
   router.route('/get').post((req, res) => {
     console.log('get');
+    res.json('Test success!')
   });
 module.exports = router;
 
