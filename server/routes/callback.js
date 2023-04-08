@@ -2,7 +2,7 @@ const router = require('express').Router();
 
   router.route('/test').post((req, res) => {
     const data = req.json;
-    console.log(data);
+    console.log(JSON.stringify(data));
     // handle the data here
     res.send('Data received');
   });
