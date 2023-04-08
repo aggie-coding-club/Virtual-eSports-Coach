@@ -23,7 +23,7 @@ const connection = mongoose.connection;
 connection.once('open',()=>{console.log('mongo connected!')})
 const usersRouter = require('./routes/users')
 server.use('/users',usersRouter)
-const callbackRouter = require('./routes/users')
+const callbackRouter = require('./routes/callback')
 server.use('/callback',callbackRouter)
 // Start the API server
 server.listen(PORT, () => console.log('Local app listening'));

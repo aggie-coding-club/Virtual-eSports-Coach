@@ -6,6 +6,8 @@ const router = require('express').Router();
     // handle the data here
     res.send('Data received');
   });
-
+  router.route('/get').post((req, res) => {
+    console.log('get');
+  });
 module.exports = router;
 
