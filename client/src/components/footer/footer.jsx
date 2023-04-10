@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './style.css';
 import logo from '../../assets/logo.png';
-
+import './style.css'
 const Menu = () => (
     <>
         <h4>Menu</h4>
