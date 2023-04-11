@@ -77,12 +77,12 @@ const HomeTitle = () => {
       </div>
 
                 {/* Username input searchbar */}
-                <div className="hometitle-username__input">
+                <div className="hometitle-username__input ">
                     <input type="text" placeholder="Enter your Riot ID"/>
 
                     {/* Enter button */}
-                    <button type="button">
-                        <img src={glass} alt="searchglass" />
+                    <button type="button" className='d-flex justify-content-center'>
+                        <img src={glass} alt="searchglass" className='mt-2'/>
                     </button>
                 </div>
 
