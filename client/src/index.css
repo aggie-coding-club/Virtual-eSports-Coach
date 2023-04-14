@@ -6,7 +6,7 @@
 :root {
   --font-family: 'Roboto Mono', monospace;
 
-  --gradient-text: #e41376;
+  --gradient-text: linear-gradient(103.22deg, #67d5fa -13.86%, #df67f4 99.55%);
   --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
 
   --color-bg: #101B37;

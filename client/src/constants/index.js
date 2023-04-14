@@ -11,11 +11,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "test",
+        name: "test1",
         color: "green-text-gradient",
       },
       {
-        name: "test",
+        name: "test2",
         color: "pink-text-gradient",
       },
     ],
@@ -33,11 +33,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "test",
+        name: "test1",
         color: "green-text-gradient",
       },
       {
-        name: "test",
+        name: "test2",
         color: "pink-text-gradient",
       },
     ],
@@ -55,11 +55,11 @@ const projects = [
         color: "blue-text-gradient" ,
       },
       {
-        name: "test",
+        name: "test1",
         color: "green-text-gradient",
       },
       {
-        name: "test",
+        name: "test2",
         color: "pink-text-gradient",
       },
     ],
