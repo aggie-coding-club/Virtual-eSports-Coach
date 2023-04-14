@@ -4,6 +4,7 @@ const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 let User = require('./schemas/users.js');
+const axios = require('axios')
 require('dotenv/config')
 
 server.use(
