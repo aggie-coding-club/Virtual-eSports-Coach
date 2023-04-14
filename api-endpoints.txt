@@ -1,0 +1,10 @@
+api server url: https://vec.onrender.com
+
+User Category:
+- GET https://vec.onrender.com/users RETURNS all users
+- POST https://vec.onrender.com/users/add INSERTS new user
+- GET https://vec.onrender.com/users/:id RETURNS user by ID
+- DELETE https://vec.onrender.com/users/:id DELETES user by ID
+- POST https://vec.onrender.com/users/update/:id UPDATES user by ID
+
+module.exports = router;

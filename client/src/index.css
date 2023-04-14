@@ -1,12 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --font-family: 'Roboto Mono', monospace;
 
-  --gradient-text: radial-gradient(ellipse farthest-side at top left, #2ECEFF 0%, #0071C7 50%, #B92ECF 100%);
+  --gradient-text: #e41376;
   --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
 
-  --color-bg: #2C2F33;
-  --color-footer: #000000;
+  --color-bg: #101B37;
   --color-blog: #042c54;
-  --color-text: #81AFDD;
-  --color-subtext: #FF8A71;
+  --color-text: #c6e3ff;
+  --color-subtext: #01c8ee;
+}
+body, html {
+  height: 100%;
+  margin: 0;
 }

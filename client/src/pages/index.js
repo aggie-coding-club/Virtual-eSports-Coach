@@ -1,4 +1,5 @@
-export { default as Home } from './home/Home';
-export { default as Register } from './register/Register';
-export { default as Stats } from './stats/Stats';
-export { default as Users } from './users/Users';
+export { default as Home } from './home/home';
+export { default as ToS } from './tos/tos';
+export { default as Register } from './register/register';
+export { default as Privacy } from './privacy/privacy';
+export { default as Dashboard } from './dashboard/dashboard';

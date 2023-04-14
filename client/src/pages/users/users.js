@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './style.css'
 
 export default class Register extends Component {
     constructor(props) {
@@ -15,8 +16,7 @@ export default class Register extends Component {
         window.location.reload()
       }
       componentDidMount() {
-        console.log(`${window.location.hostname}/users/`)
-        axios.get(`${window.location.hostname}/users/`)
+        axios.get(`https://vec.onrender.com/users/`)
           .then(response => {
             this.setState({ data: response.data })
             console.log(this.List())
@@ -33,7 +33,7 @@ export default class Register extends Component {
       }
       onSubmit(e) {
         e.preventDefault();
-        axios.delete(`${window.location.hostname}/users/${this.state.id}`)
+        axios.delete(`https://vec.onrender.com/users/${this.state.id}`)
           .then(() => console.log('deleted')).then(this.refresh());
       }
       

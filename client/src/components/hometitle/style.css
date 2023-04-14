@@ -1,0 +1,183 @@
+.hometitle {
+    width: 100%;
+    display: flex;
+}
+
+/* Formatting settings for the entire header object */
+.hometitle-content {
+    flex: 1;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+}
+
+/* Big gradient text formatting */
+.hometitle-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 44px !important;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+/* Smaller description text formatting */
+.hometitle-content p {
+    font-family: var(--font-family);
+
+    color: var(--color-subtext);
+    margin-top: 1.5rem;
+    font-size: 20px;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.circle {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(118, 118, 118, 0.45);
+    border-radius: 100%;
+  }
+
+.circle p {
+    margin-right: 1.2rem;
+    margin-bottom: 20px;
+}
+  
+.circle-text {
+    margin: auto;
+  }
+
+
+.hometitle-username__input {
+    width: 100%;
+    margin: 2rem 0 1rem;
+
+    flex-direction: row;
+    display: flex;
+}
+
+.hometitle-username__input input {
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: normal;
+
+
+    background: black;
+    font-size: 20px;
+    line-height: 27px;
+    color: #29539D;
+    margin-top: 1.5rem;
+
+    border: 2px solid #AE67FA;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+    padding: 0 1rem;
+}
+
+.hometitle-username__input button {
+    flex: 0.6;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 1.5rem;
+
+    background: #29539D;
+    font-size: 20px;
+    line-height: 27px;
+    color: #29539D;
+    cursor: pointer;
+    outline: none;
+
+    border: 2px solid #AE67FA;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+/* Searchglass size in pixels */
+.hometitle-username__input img {
+    width: 30px;
+}
+
+/* Big Gekko image formatting */
+.hometitle-image {
+    flex: 1;
+    transform: scale(0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Support for smaller displays */
+.hometitle h1 {
+        flex-direction: column;
+        font-size: 4px;
+        line-height: 60px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .hometitle {
+        flex-direction: column;
+    }
+
+    .hometitle-content {
+        margin: 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .hometitle h1 {
+        flex-direction: column;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .hometitle-content {
+        margin: 0 0 3rem;
+    }
+
+    .hometitle p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .hometitle-content_input input,
+    .hometitle-content_input button {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .hometitle h1 {
+        flex-direction: column;
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .hometitle p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .hometitle-content_input input,
+    .hometitle-content_input button {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
