@@ -9,9 +9,9 @@ require('dotenv/config')
 
 
 server.use(cors())
-server.use(bodyParser.json());
+server.use(express.json());
 server.use(
-  bodyParser.urlencoded({
+  express.urlencoded({
     extended: true,
   })
 );
