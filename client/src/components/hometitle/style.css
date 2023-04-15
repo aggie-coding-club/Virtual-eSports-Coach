@@ -2,6 +2,9 @@
     width: 100%;
     display: flex;
 }
+.tinytext{
+ font-size:50% !important;
+}
 
 /* Formatting settings for the entire header object */
 .hometitle-content {
@@ -27,7 +30,6 @@
 
     color: var(--color-subtext);
     margin-top: 1.5rem;
-    font-size: 20px;
 }
 
 .circles {
@@ -152,7 +154,6 @@
     }
 
     .hometitle p {
-        font-size: 16px;
         line-height: 24px;
     }
 
@@ -171,7 +172,6 @@
     }
 
     .hometitle p {
-        font-size: 14px;
         line-height: 24px;
     }
 

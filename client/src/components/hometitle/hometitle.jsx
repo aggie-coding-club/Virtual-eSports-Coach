@@ -60,10 +60,11 @@ const StepsCard = ({
     constructor(props) {
         
         super(props);
-        this.state = {id: '',reload: false,matches:[]};
+        this.state = {id: '',reload: false,matches:[],toggle:'',matchdata:[]};
         this.onChangeID = this.onChangeID.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       } 
+      
       getMatches() {
         return this.state.matches
       }
@@ -101,24 +102,20 @@ const StepsCard = ({
           await this.promisedSetState({
             matches:response.data.history
           })
-          console.log(this.state.matches)
-          
-        
-        })
-        
-        })
-        
-  }catch(err)
-  {
-    console.log('input invalid')
-  }
-  
-  }
-      
+          console.log(this.state.matches)})})}catch(err){console.log('input invalid'+err)}
+      }
+      getMatch(matchid){
+        axios.get(`https://vec.onrender.com/riot/match/${matchid}`)
+        .then((response) =>{
+          console.log(response.data);
+          var joined = Object.assign({},this.state.matchdata,{[matchid]:JSON.stringify(response.data)})
+          this.setState({toggle:matchid,matchdata:joined});}).catch((err)=>{console.log(err);})
+      console.log(this.state.matchdata)
+      }
          
   render() {
+    
     return (
-          
       <div className="hometitle section__padding align-middle d-flex justify-content-center" id="home">
           <div className="hometitle-content " >
 
@@ -143,12 +140,18 @@ const StepsCard = ({
                   </button>
               </div>
               <div>
-              <ul >
           {this.getMatches().map(item => (
             <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3'>
-            <li key={item.matchId}><p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}</p></li></div>
+            {this.state.toggle===item.matchId
+                    ? <div key={item.matchId} onClick={() => {this.setState({toggle:''})}}>
+                      <div>
+                      <p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
+                      </div>
+                    <div className='text-white tinytext'><p className='text-white tinytext'>{this.state.matchdata[item.matchId]}</p></div></div>
+                    
+                    : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
+            </div>
           ))}
-        </ul>
               </div>
 
           </div>
