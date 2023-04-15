@@ -60,17 +60,25 @@ const StepsCard = ({
     constructor(props) {
         
         super(props);
-        this.state = {data: [],id: '',reload: false};
+        this.state = {id: '',reload: false,matches:[]};
         this.onChangeID = this.onChangeID.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       } 
-      List() {
-        return this.state.data
+      getMatches() {
+        return this.state.matches
       }
       refresh = () => {
         window.location.reload()
       }
-      
+      timeConvert(time){
+        const months ={'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
+        var dateLocal = new Date(time);
+        var newDate = new Date(dateLocal.getTime() - dateLocal.getTimezoneOffset()*60*1000);
+        const datestr = newDate.toString().split(' ')
+        const outstr = months[datestr[1]]+'/'+datestr[2]+'/'+datestr[3]+' '+datestr[4]
+        return outstr
+      } 
+      promisedSetState = (newState) => new Promise(resolve => this.setState(newState, resolve));
       onChangeID(e) {
         this.setState({
           id: e.target.value
@@ -83,7 +91,22 @@ const StepsCard = ({
        try{ 
         const user = this.state.id.split('#')[0]
         const tag = this.state.id.split('#')[1]
-        console.log(user+''+tag)
+        axios.post('https://vec.onrender.com/riot/puuid', {
+          'user': user,
+          'tag': tag
+        })
+        .then((response) =>{
+          axios.get(`https://vec.onrender.com/riot/matches/${response.data.puuid}`)
+        .then(async(response) =>{
+          await this.promisedSetState({
+            matches:response.data.history
+          })
+          console.log(this.state.matches)
+          
+        
+        })
+        
+        })
         
   }catch(err)
   {
@@ -118,6 +141,14 @@ const StepsCard = ({
                   <button type="button" className='d-flex justify-content-center' onClick={this.onSubmit}>
                       <img src={glass} alt="searchglass" className='mt-2'/>
                   </button>
+              </div>
+              <div>
+              <ul >
+          {this.getMatches().map(item => (
+            <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3'>
+            <li key={item.matchId}><p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}</p></li></div>
+          ))}
+        </ul>
               </div>
 
           </div>
