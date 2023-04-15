@@ -29,6 +29,10 @@ const callbackRouter = require('./routes/callback')
 server.use('/callback',callbackRouter)
 const riotRouter = require('./routes/riot')
 server.use('/riot',riotRouter)
+server.post("/post", (req, res) => {
+  console.log(req.body);
+  res.json({ status: "ok" });
+});
 // Start the API server
 server.listen(PORT, () => console.log('Local app listening'));
 
