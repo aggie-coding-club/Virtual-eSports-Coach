@@ -143,8 +143,8 @@ const StepsCard = ({
           {this.getMatches().map(item => (
             <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3'>
             {this.state.toggle===item.matchId
-                    ? <div key={item.matchId} onClick={() => {this.setState({toggle:''})}}>
-                      <div>
+                    ? <div key={item.matchId}>
+                      <div onClick={() => {this.setState({toggle:''})}}>
                       <p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
                       </div>
                     <div className='text-white tinytext'><p className='text-white tinytext'>{this.state.matchdata[item.matchId]}</p></div></div>
