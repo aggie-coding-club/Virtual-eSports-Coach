@@ -4,7 +4,6 @@ const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 let User = require('./schemas/users.js');
-var bodyParser = require('body-parser')
 require('dotenv/config')
 
 
@@ -29,9 +28,9 @@ const callbackRouter = require('./routes/callback')
 server.use('/callback',callbackRouter)
 const riotRouter = require('./routes/riot')
 server.use('/riot',riotRouter)
-server.post("/post", (req, res) => {
+server.post('/post', (req, res) => {
   console.log(req.body);
-  res.json({ status: "ok" });
+  res.json(req.body);
 });
 // Start the API server
 server.listen(PORT, () => console.log('Local app listening'));
