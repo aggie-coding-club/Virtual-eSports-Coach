@@ -4,15 +4,17 @@ const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 let User = require('./schemas/users.js');
+var bodyParser = require('body-parser')
 require('dotenv/config')
 
+
+server.use(cors())
+server.use(bodyParser.json());
 server.use(
-  express.urlencoded({
+  bodyParser.urlencoded({
     extended: true,
   })
 );
-server.use(cors())
-server.use(express.json());
 mongoose.connect(process.env.MONGODB_URI,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
