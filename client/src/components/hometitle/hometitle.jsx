@@ -74,8 +74,7 @@ const StepsCard = ({
       timeConvert(time){
         const months ={'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
         var dateLocal = new Date(time);
-        var newDate = new Date(dateLocal.getTime() - dateLocal.getTimezoneOffset()*60*1000);
-        const datestr = newDate.toString().split(' ')
+        const datestr = dateLocal.toString().split(' ')
         const outstr = months[datestr[1]]+'/'+datestr[2]+'/'+datestr[3]+' '+datestr[4]
         return outstr
       } 
@@ -141,7 +140,7 @@ const StepsCard = ({
               </div>
               <div>
           {this.getMatches().map(item => (
-            <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3'>
+            <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3 scale-up-center'>
             {this.state.toggle===item.matchId
                     ? <div key={item.matchId}>
                       <div onClick={() => {this.setState({toggle:''})}}>

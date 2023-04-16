@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {Cards} from "./components"
-import { Home,Register,ToS,Privacy, Dashboard } from "./pages";
+import { Home,Register,ToS,Privacy, Dashboard,Test } from "./pages";
 import { Navbar,Footer } from './components';
 import { ParallaxProvider} from 'react-scroll-parallax';
 /*
@@ -28,6 +28,7 @@ const App = () => {
           <Route path="tos" element={<ToS />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="privacy" element={<Privacy />} />
+          <Route path="test2" element={<Test/>} />
         </Route>
       </Routes>
       </div>
