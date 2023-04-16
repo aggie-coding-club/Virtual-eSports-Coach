@@ -1,11 +1,32 @@
 import React from 'react';
 import './style.css'
-const Test = () => {
-  return (
-      <div className='dashboard'>
-        <h1>THIS IS A TEST PAGE</h1>
-      </div>
+import * as THREE from 'three';
+import {Canvas} from '@react-three/fiber'
+
+function Planet() {
+  return ( 
+    <mesh>
+      <sphereBufferGeometry attach="geom" args={[5, 32, 32]} />
+      <meshBasicMaterial attach="mat" map="../../../../public/planet/textures/Planet_baseColor.png" />
+    </mesh>
   )
 }
 
-export default Test;
+function Atmosphere() {
+    return (
+      <mesh>
+        <sphereBufferGeometry attach="geom" args={[7, 32, 32]} />
+        <meshBasicMaterial attach="mat" map="../../../../public/planet/textures/Clouds_baseColor.png"/>
+      </mesh>
+    );
+}
+
+export default function Test() {
+  return (
+    <Canvas>
+      <Stars />
+      <Planet angle={0.3} />
+      <Atmosphere angle={0.3} />
+    </Canvas>
+  );
+}
