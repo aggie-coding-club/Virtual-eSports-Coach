@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer section__padding" >
             <div>
                 <div className="footer-heading">
-                    <h2>Footer example text</h2>
+                    <h2>Site links</h2>
                 </div>
 
                 <div className="footer-links">
