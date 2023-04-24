@@ -15,7 +15,7 @@ const SkyboxCanvas = () => {
   return (
     
       <div ><Canvas
-    style={{width: `100%`,height:'100%',position: `fixed`, zIndex:-1,display: "flex",marginTop:'-100px' }}
+    style={{width: `100%`,height:'100%',position: `fixed`, zIndex:-1,display: "flex", marginTop:'-100px' }}
     className="col"
       frameloop='demand'
       dpr={[1, 5]}
