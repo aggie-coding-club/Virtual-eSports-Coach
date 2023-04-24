@@ -1,12 +1,13 @@
 import React from 'react';
-import {HomeTitle,ParallaxImg,Cards} from "../../components";
+import {HomeTitle,ParallaxImg,SkyboxCanvas} from "../../components";
 import './style.css'
 
 
 const Home = () => {
   return (
       <div className="App">
-        <HomeTitle />
+        <SkyboxCanvas/><HomeTitle />
+        
       </div>
   )
 }

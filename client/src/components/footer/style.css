@@ -4,9 +4,9 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    
     background-position: 'center'!important;
     background-repeat: 'no-repeat';
+    background-color: #042c62;
 }
 
 .footer-heading {

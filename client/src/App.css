@@ -169,13 +169,13 @@ a {
 }
 
 /* The gradient background used in the Navbar and Header */
-.gradient__bg {
+.gradient-bg {
   /*background-image: url('./assets/bg4.png');*/
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover !important;
-  z-index: -6;
+  z-index: 0;
 
   /* ff 3.6+ */
   background:-moz-radial-gradient(circle at 3% 2%, rgba(0, 47, 100, 1) 0%, rgba(73, 0, 80, 1) 51%, rgba(0, 0, 0, 1) 100%);

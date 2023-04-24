@@ -16,7 +16,7 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <div className="navbar">
+        <div className="navbar gradient-bg">
 
             {/* Navbar subsections and linking */}
             <div className="navbar-links">

@@ -121,7 +121,7 @@ const StepsCard = ({
   render() {
     
     return (
-      <div className="hometitle section__padding align-middle d-flex justify-content-center" id="home">
+      <div><div className="hometitle section__padding align-middle d-flex justify-content-center" id="home">
           <div className="hometitle-content " >
 
               {/* Big gradient text */}
@@ -144,30 +144,33 @@ const StepsCard = ({
                       <img src={glass} alt="searchglass" className='mt-2'/>
                   </button>
               </div>
-              <div>
-          {this.getMatches().slice(this.getPage()*10,this.getPage()*10+10).map(item => (
-            <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3 scale-up-center'>
-            {this.state.toggle===item.matchId
-                    ? <div key={item.matchId}>
-                      <div onClick={() => {this.setState({toggle:''})}}>
-                      <p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
-                      </div>
-                    <div className='text-white tinytext'><p className='text-white tinytext'>{this.state.matchdata[item.matchId]}</p></div></div>
-                    
-                    : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
-            </div>
-          ))}
-              </div>
-              {this.matchesLen()>=1?<div className='row'>
-              <div className='col mr-5'>
-                {this.getPage()>=1?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
-              </div>
-              <div className='col ml-5'>
-                {(this.getPage()+1)*10<this.matchesLen()?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
-              </div>
-              </div>:""}
+              
     </div>
       </div>
+      <div className='gradient-bg hometitle-content' style={{width:"100%"}}>
+              
+      <div>
+  {this.getMatches().slice(this.getPage()*10,this.getPage()*10+10).map(item => (
+    <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3 scale-up-center'>
+    {this.state.toggle===item.matchId
+            ? <div key={item.matchId}>
+              <div onClick={() => {this.setState({toggle:''})}}>
+              <p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
+              </div>
+            <div className='text-white tinytext'><p className='text-white tinytext'>{this.state.matchdata[item.matchId]}</p></div></div>
+            
+            : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
+    </div>
+  ))}
+      </div>
+      {this.matchesLen()>=1?<div className='row'>
+      <div className='col mr-5'>
+        {this.getPage()>=1?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
+      </div>
+      <div className='col ml-5'>
+        {(this.getPage()+1)*10<this.matchesLen()?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
+      </div>
+      </div>:""}</div></div>
   );
   }
 }

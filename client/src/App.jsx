@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {Cards} from "./components"
-import { Home,Register,ToS,Privacy, Dashboard,Test } from "./pages";
+import { Home,Register,ToS,Privacy, Dashboard,ThreePlayGround} from "./pages";
 import { Navbar,Footer } from './components';
 import { ParallaxProvider} from 'react-scroll-parallax';
 /*
@@ -19,7 +19,7 @@ const App = () => {
       
       <Navbar />
       
-      <div className="gradient__bg">
+      <div /*className="gradient__bg"*/>
       <Routes>
         <Route path="/" /*element={<Layout />}*/>
           <Route index element={<Home />} />
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="tos" element={<ToS />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="privacy" element={<Privacy />} />
-          <Route path="test2" element={<Test/>} />
+          <Route path="three" element={<ThreePlayGround/>} />
         </Route>
       </Routes>
       </div>

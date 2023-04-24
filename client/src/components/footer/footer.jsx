@@ -26,7 +26,7 @@ const Company = () => (
 const Footer = () => {
     
     return (
-        <div className="footer mt-3" >
+        <div className="footer pt-3">
             <div className='container'> 
                 
 
