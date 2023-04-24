@@ -149,7 +149,7 @@ const StepsCard = ({
       </div>
       <div className='gradient-bg hometitle-content' style={{width:"100%"}}>
               
-      <div>
+      {this.matchesLen()>=1?<div className='mt-3'>
   {this.getMatches().slice(this.getPage()*10,this.getPage()*10+10).map(item => (
     <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3 scale-up-center'>
     {this.state.toggle===item.matchId
@@ -162,7 +162,9 @@ const StepsCard = ({
             : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
     </div>
   ))}
-      </div>
+      </div>:''}
+
+
       {this.matchesLen()>=1?<div className='row'>
       <div className='col mr-5'>
         {this.getPage()>=1?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
