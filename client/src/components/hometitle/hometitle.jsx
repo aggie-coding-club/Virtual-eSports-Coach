@@ -46,7 +46,7 @@ const StepsCard = ({
                 key={`${name}-${tag.name}`}
                 className={`text-[14px] ${tag.color}`}
               >
-                #{tag.name}
+                {tag.name}
               </p>
             ))}
           </div>
@@ -150,20 +150,20 @@ const StepsCard = ({
             {this.state.toggle===item.matchId
                     ? <div key={item.matchId}>
                       <div onClick={() => {this.setState({toggle:''})}}>
-                      <p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
+                      <p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</p>
                       </div>
                     <div className='text-white tinytext'><p className='text-white tinytext'>{this.state.matchdata[item.matchId]}</p></div></div>
                     
-                    : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
+                    : <div key={item.matchId} onClick={() => {this.getMatch(item.matchId)}}><p style={{cursor:"pointer"}}>Time: {this.timeConvert(item.gameStartTimeMillis)}&nbsp;&nbsp;&nbsp;Game: {item.queueId}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</p></div>}
             </div>
           ))}
               </div>
               {this.matchesLen()>=1?<div className='row'>
               <div className='col mr-5'>
-                {this.getPage()>=1?<h1 onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
+                {this.getPage()>=1?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
               </div>
               <div className='col ml-5'>
-                {(this.getPage()+1)*10<this.matchesLen()?<h1 onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
+                {(this.getPage()+1)*10<this.matchesLen()?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
               </div>
               </div>:""}
     </div>

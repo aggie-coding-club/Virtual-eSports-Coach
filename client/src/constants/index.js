@@ -7,17 +7,9 @@ const projects = [
       "Login with your Riot account to begin",
     tags: [
       {
-        name: "test",
+        name: `Easy Registration`,
         color: "blue-text-gradient",
-      },
-      {
-        name: "test1",
-        color: "green-text-gradient",
-      },
-      {
-        name: "test2",
-        color: "pink-text-gradient",
-      },
+      }
     ],
     image: './../assets/logo.png',
     source_code_link: "https://github.com/",
@@ -29,17 +21,9 @@ const projects = [
       "Our machine learning model will help you identify your game performace",
     tags: [
       {
-        name: "test",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "test1",
+        name: "AI Video Vision",
         color: "green-text-gradient",
-      },
-      {
-        name: "test2",
-        color: "pink-text-gradient",
-      },
+      }
     ],
     image: './../assets/logo.png',
     source_code_link: "https://github.com/",
@@ -51,15 +35,7 @@ const projects = [
       "Access to our detailed stat analysis and interactive tutorials",
     tags: [
       {
-        name: "test",
-        color: "blue-text-gradient" ,
-      },
-      {
-        name: "test1",
-        color: "green-text-gradient",
-      },
-      {
-        name: "test2",
+        name: "Instant Online Coaching",
         color: "pink-text-gradient",
       },
     ],
