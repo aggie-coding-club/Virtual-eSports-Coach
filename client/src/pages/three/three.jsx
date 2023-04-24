@@ -20,7 +20,7 @@ const Ball = (props) => {
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <sphereBufferGeometry map={decal}/>
+        <sphereGeometry map={decal}/>
         <meshBasicMaterial
           map={decal}
         />
@@ -51,6 +51,7 @@ const ThreePlayGround = () => {
       <OrbitControls
           autoRotate
           enableZoom={false}
+          maxPolarAngle={1.57}
         />
         <Earth/>
       </Suspense>
