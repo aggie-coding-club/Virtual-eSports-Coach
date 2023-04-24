@@ -60,13 +60,19 @@ const StepsCard = ({
     constructor(props) {
         
         super(props);
-        this.state = {id: '',reload: false,matches:[],toggle:'',matchdata:[]};
+        this.state = {id: '',reload: false,matches:[],toggle:'',matchdata:[],pagenumber:0};
         this.onChangeID = this.onChangeID.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       } 
       
       getMatches() {
         return this.state.matches
+      }
+      matchesLen(){
+        return this.state.matches.length
+      }
+      getPage() {
+        return this.state.pagenumber
       }
       refresh = () => {
         window.location.reload()
@@ -139,7 +145,7 @@ const StepsCard = ({
                   </button>
               </div>
               <div>
-          {this.getMatches().map(item => (
+          {this.getMatches().slice(this.getPage()*10,this.getPage()*10+10).map(item => (
             <div className='d-flex bg-tertiary rounded-xl mt-1 justify-content-center pl-3 pr-3 scale-up-center'>
             {this.state.toggle===item.matchId
                     ? <div key={item.matchId}>
@@ -152,8 +158,15 @@ const StepsCard = ({
             </div>
           ))}
               </div>
-
-          </div>
+              {this.matchesLen()>=1?<div className='row'>
+              <div className='col mr-5'>
+                {this.getPage()>=1?<h1 onClick={() => {this.setState({pagenumber:this.getPage()-1})}}>◀</h1>:""}
+              </div>
+              <div className='col ml-5'>
+                {(this.getPage()+1)*10<this.matchesLen()?<h1 onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
+              </div>
+              </div>:""}
+    </div>
       </div>
   );
   }

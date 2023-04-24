@@ -26,32 +26,30 @@ const Company = () => (
 const Footer = () => {
     
     return (
-        <div className="footer section__padding" >
-            <div>
-                <div className="footer-heading">
-                    <h2>Site links</h2>
-                </div>
+        <div className="footer mt-3" >
+            <div className='container'> 
+                
 
-                <div className="footer-links">
-                    <div className="footer-links_logo">
+                <div className="footer-links mt-5n row">
+                    <div className="footer-links_logo col-3">
                         <img src={logo} alt="logo"></img>
                     </div>
 
-                    <div className="footer-links_div">
+                    <div className="footer-links_div col-3">
                         <Menu />
                     </div>
 
-                    <div className="footer-links_div">
+                    <div className="footer-links_div col-3">
                         <Info />
                     </div>
 
-                    <div className="footer-links_div">
+                    <div className="footer-links_div col-3">
                         <Company />
                     </div>
 
                 </div>
 
-                <div className="footer-copyright">
+                <div className="footer-copyright pb-3">
                     <p>© 2023 Virtual eSports Coach. All rights reserved.</p>
                 </div>
 

@@ -132,7 +132,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+h1{
+  color:#ffffff
+}
 .pink-text-gradient {
   background: #ec008c; /* fallback for old browsers */
   background: -webkit-linear-gradient(
