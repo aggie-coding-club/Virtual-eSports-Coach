@@ -14,9 +14,8 @@ const Skybox = () => {
 const SkyboxCanvas = () => {
   return (
     
-      <div ><Canvas
-    style={{width: `100%`,height:'100%',position: `fixed`, zIndex:-10,display: "flex", marginTop:'-100px' }}
-    className="col"
+      <div style={{width: `100%`,height:'100vh',position: `absolute`, zIndex:-1 }}><Canvas
+    
       frameloop='demand'
       dpr={[1, 5]}
       gl={{ preserveDrawingBuffer: true }}

@@ -1,16 +1,17 @@
+
+import {SkyboxCanvas} from "../components";
+
+
 import React, { Component } from 'react';
-import glass from "../../assets/searchglass.png";
+import glass from "../assets/searchglass.png";
 import { useGlitch } from 'react-powerglitch'
-import { Cards } from '../../components';
+import { Cards } from '../components';
 import { ParallaxProvider,useParallax, Parallax} from 'react-scroll-parallax';
 import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 import axios from 'axios';
-import { styles } from "../../styles";
-import { SectionWrapper } from "../../hoc";
-import { projects } from "../../constants";
-import { fadeIn, textVariant } from "../../utils/motion";
-import './style.css'
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 
 const StepsCard = ({
@@ -21,6 +22,7 @@ const StepsCard = ({
     number
   }) => {
     return (
+      <>
       <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} >
         <Tilt
           options={{
@@ -51,11 +53,11 @@ const StepsCard = ({
             ))}
           </div>
         </Tilt>
-      </motion.div>
+      </motion.div></>
     );
   };
 
-  export default class HomeTitle extends Component {
+  export default class Home extends Component {
     
     constructor(props) {
         
@@ -121,7 +123,10 @@ const StepsCard = ({
   render() {
     
     return (
-      <div><div className="hometitle section__padding align-middle d-flex justify-content-center" id="home">
+      <>
+      <SkyboxCanvas/>
+      <div style={{minHeight:"100vh"}}>
+        <div className="hometitle section__padding align-middle d-flex justify-content-center" id="home">
           <div className="hometitle-content " >
 
               {/* Big gradient text */}
@@ -172,7 +177,7 @@ const StepsCard = ({
       <div className='col ml-5'>
         {(this.getPage()+1)*10<this.matchesLen()?<h1 style={{cursor:"pointer"}} onClick={() => {this.setState({pagenumber:this.getPage()+1})}}>▶</h1>:""}
       </div>
-      </div>:""}</div></div>
+      </div>:""}</div></div></>
   );
   }
 }

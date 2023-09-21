@@ -1,6 +1,4 @@
-export { default as Navbar } from './navbar/navbar';
-export { default as Footer } from './footer/footer';
-export { default as HomeTitle } from './hometitle/hometitle';
-export { default as ParallaxImg } from './parallaximg/parallaximg';
-export { default as Cards } from './cards/cards';
-export { default as SkyboxCanvas } from './skybox/skybox';
+export { default as Navbar } from './navbar';
+export { default as Footer } from './footer';
+export { default as Cards } from './cards';
+export { default as SkyboxCanvas } from './skybox';

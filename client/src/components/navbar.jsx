@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import logo from '../../assets/logo.png';
-import './style.css'
+import logo from '../assets/logo.png';
 
 const Menu = () => (
     <>
@@ -16,7 +15,7 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <div className="navbar gradient-bg">
+        <div className="navbar position-sticky gradient-bg">
 
             {/* Navbar subsections and linking */}
             <div className="navbar-links">
