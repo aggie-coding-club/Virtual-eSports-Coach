@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+      "concurrently": "^8.2.0"
+    },
+    "scripts": {
+      "start": "concurrently \"cd adminserver && node server\"  \"cd adminclient && npm start\"",
+      "client": "cd client && npm start"
+    }
+  }
+  
