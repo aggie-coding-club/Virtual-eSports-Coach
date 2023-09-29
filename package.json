@@ -3,7 +3,7 @@
       "concurrently": "^8.2.0"
     },
     "scripts": {
-      "start": "concurrently \"cd adminserver && node server\"  \"cd adminclient && npm start\"",
+      "start": "concurrently \"cd server && node server\"  \"cd client && npm start\"",
       "client": "cd client && npm start"
     }
   }
