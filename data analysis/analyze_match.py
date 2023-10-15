@@ -7,4 +7,4 @@ url = "https://na.api.riotgames.com/val/match/v1/matches/"+match_id+"?api_key=RG
 data = requests.get(url).json()
 for d in data:
     print(d)
-print(data)
+#print(data)
