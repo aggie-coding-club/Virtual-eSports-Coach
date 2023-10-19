@@ -44,8 +44,8 @@ def get_player_metadata(file_path):
             "character_id": player.get("characterId", "N/A")
         }
         player_data.append(player_info)
-    metadataDF = pd.DataFrame(player_data)
-    return metadataDF
+    metadata_df = pd.DataFrame(player_data)
+    return metadata_df
 
 # GET ALL PLAYERS' DATA (all rounds in game), outputs to a dataframe
 def get_player_combined_data(round_dataframes, target_puuid):
@@ -84,38 +84,47 @@ def get_player_damage(round_dataframes, target_puuid):
         print(f"Player with puuid {target_puuid} not found while calling get_player_damage")
         return [], 0
 
-def get_player_legshots(round_dataframes, target_puuid):
+def get_player_headshots_by_round(round_dataframes, target_puuid):
     player_damage = get_player_damage(round_dataframes, target_puuid)
-    legshots = 0
+    headshots_by_round = []
+
     for round_damage in player_damage:
+        round_headshots = 0
         for damage in round_damage:
-            legshots += damage["legshots"]
-    return legshots
+            round_headshots += damage["headshots"]
+        headshots_by_round.append(round_headshots)
+    return headshots_by_round
 
-
-def get_player_bodyshots(round_dataframes, target_puuid):
+def get_player_damage_by_round(round_dataframes, target_puuid):
     player_damage = get_player_damage(round_dataframes, target_puuid)
-    bodyshots = 0
-    for round_damage in player_damage:
-        for damage in round_damage:
-            bodyshots += damage["bodyshots"]
-    return bodyshots
+    damage_by_round = []
 
-def get_player_headshots(round_dataframes, target_puuid):
-    player_damage = get_player_damage(round_dataframes, target_puuid)
-    headshots = 0
     for round_damage in player_damage:
+        round_damage_total = 0
         for damage in round_damage:
-            headshots += damage["headshots"]
-    return headshots
+            round_damage_total += damage["damage"]
+        damage_by_round.append(round_damage_total)
+    return damage_by_round
 
-def get_player_damage_done(round_dataframes, target_puuid):
+def get_player_legshots_by_round(round_dataframes, target_puuid):
     player_damage = get_player_damage(round_dataframes, target_puuid)
-    damage_done = 0
+    legshots_by_round = []
     for round_damage in player_damage:
+        round_legshots = 0
         for damage in round_damage:
-            damage_done += damage["damage"]
-    return damage_done
+            round_legshots += damage["legshots"]
+        legshots_by_round.append(round_legshots)
+    return legshots_by_round
+
+def get_player_bodyshots_by_round(round_dataframes, target_puuid):
+    player_damage = get_player_damage(round_dataframes, target_puuid)
+    bodyshots_by_round = []
+    for round_damage in player_damage:
+        round_bodyshots = 0
+        for damage in round_damage:
+            round_bodyshots += damage["bodyshots"]
+        bodyshots_by_round.append(round_bodyshots)
+    return bodyshots_by_round
 
 # INITIALIZE ROUND DATAFRAMES
 with open('organizedOutputGage.json', 'r') as file:
@@ -163,6 +172,7 @@ for round_result in round_results: # creates a dictionary for each round
     ###
     round_df = pd.DataFrame([round_data])
     round_dataframes.append(round_df)
+
 # print(round_dataframes[0]) # this is the complete data for the first round
 
 # Example usages:
@@ -174,10 +184,24 @@ for round_result in round_results: # creates a dictionary for each round
 #print(get_player_combined_data(round_dataframes, target_puuid))
 
 #print("player round scores: ", get_player_scores(round_dataframes, target_puuid))
+
+print("get_player damage called: ", "\n\n", get_player_damage(round_dataframes, target_puuid))
+
+
+print("player scores by round: ", get_player_scores(round_dataframes, target_puuid))
 print("player total score: ", sum(get_player_scores(round_dataframes, target_puuid)))
 
-#print(get_player_damage(round_dataframes, target_puuid))
-print("total legshots: ", get_player_legshots(round_dataframes, target_puuid))
-print("total bodyshots: ", get_player_bodyshots(round_dataframes, target_puuid))
-print("total headshots: ", get_player_headshots(round_dataframes, target_puuid))
-print("total damage done: ", get_player_damage_done(round_dataframes, target_puuid))
+print("Headshots by round:", get_player_headshots_by_round(round_dataframes, target_puuid))
+print("Total headshots in game: ", sum(get_player_damage_by_round(round_dataframes, target_puuid)))
+
+print("Damage by round:", get_player_damage_by_round(round_dataframes, target_puuid))
+print("Total damage in game: ", sum(get_player_damage_by_round(round_dataframes, target_puuid)))
+
+print("Legshots by round:", get_player_legshots_by_round(round_dataframes, target_puuid))
+print("Total legshots in game: ", sum(get_player_legshots_by_round(round_dataframes, target_puuid)))
+
+print("Bodyshots by round:", get_player_bodyshots_by_round(round_dataframes, target_puuid))
+print("Total bodyshots in game: ", sum(get_player_bodyshots_by_round(round_dataframes, target_puuid)))
+
+#TODO: add functions that break up Economy and Ability stats by round, like the damage functions above
+
