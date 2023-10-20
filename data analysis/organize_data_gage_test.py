@@ -20,19 +20,3 @@ for match_id in match_ids[:max_matches]:
     #print(data, "This is a status message")
 file=open('./organizedOutputGage.json','w')
 file.write(json.dumps(data, indent=4))
-
-
-#print(match_ids)
-#print(out)
-
-
-
-'''
-with open('organizedOutputGage.json', 'r') as file:
-    inputData = json.load(file)
-players_data = []
-for i in inputData.items():
-    for j in i:
-        for k in j:
-            print(k)
-'''
