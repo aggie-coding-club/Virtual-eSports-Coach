@@ -221,6 +221,15 @@ def get_remaining(round_dataframes, target_puuid):
                 remaining.append(round_economy["remaining"])
     return remaining
 
+def get_spent(round_dataframes, target_puuid):
+    player_economy = get_player_economy(round_dataframes, target_puuid)
+    spent = []
+
+    for round_economy in player_economy:
+            if "spent" in round_economy:
+                spent.append(round_economy["spent"])
+    return spent
+
 
 ################################################################################
 
@@ -281,7 +290,7 @@ print("player's total score: ", sum(get_player_scores(round_dataframes, target_p
 
 #print("get_player damage called: ", "\n\n", get_player_damage(round_dataframes, target_puuid))
 print("Headshots by round:", get_player_headshots_by_round(round_dataframes, target_puuid))
-print("Total headshots in game: ", sum(get_player_damage_by_round(round_dataframes, target_puuid)))
+print("Total headshots in game: ", sum(get_player_headshots_by_round(round_dataframes, target_puuid)))
 print("Damage by round:", get_player_damage_by_round(round_dataframes, target_puuid))
 print("Total damage in game: ", sum(get_player_damage_by_round(round_dataframes, target_puuid)))
 print("Legshots by round:", get_player_legshots_by_round(round_dataframes, target_puuid))
@@ -294,7 +303,7 @@ print("\nloadout values: ", "\n", get_loadout_values(round_dataframes, target_pu
 print("\nweapon: ", "\n", get_weapon(round_dataframes, target_puuid))
 print("\narmor: ", "\n", get_armor(round_dataframes, target_puuid))
 print("\nremaining: ", "\n", get_remaining(round_dataframes, target_puuid))
-print("\nspent: ", "\n", get_remaining(round_dataframes, target_puuid))
+print("\nspent: ", "\n", get_spent(round_dataframes, target_puuid))
 
 #print("\nget_player ability called: ", "\n\n", get_player_ability(round_dataframes, target_puuid))
 print("\ngrenadeEffects: ", "\n", get_grenadeEffects(round_dataframes, target_puuid))
