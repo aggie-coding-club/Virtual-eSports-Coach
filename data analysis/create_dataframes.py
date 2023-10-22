@@ -30,7 +30,7 @@ def get_match_info(file_path):
     match_info_df = pd.DataFrame([match_info_data])
     return match_info_df
 
-# GETS ALL PLAYER METADATA
+# GETS ALL METADATA FOR EACH PLAYER
 def get_player_metadata(file_path):
     with open(file_path, 'r') as file:
         data2 = json.load(file)
@@ -289,6 +289,7 @@ print("player's total score: ", sum(get_player_scores(round_dataframes, target_p
 
 
 #print("get_player damage called: ", "\n\n", get_player_damage(round_dataframes, target_puuid))
+
 print("Headshots by round:", get_player_headshots_by_round(round_dataframes, target_puuid))
 print("Total headshots in game: ", sum(get_player_headshots_by_round(round_dataframes, target_puuid)))
 print("Damage by round:", get_player_damage_by_round(round_dataframes, target_puuid))
@@ -310,6 +311,8 @@ print("\ngrenadeEffects: ", "\n", get_grenadeEffects(round_dataframes, target_pu
 print("\nability1Effects: ", "\n", get_ability1Effects(round_dataframes, target_puuid))
 print("\nability2Effects: ", "\n", get_ability2Effects(round_dataframes, target_puuid))
 print("\nultimateEffects: ", "\n", get_ultimateEffects(round_dataframes, target_puuid))
+
+# need to define a dictionary or something to convert the weapon/armor IDs to names
 
 '''
 currently, all i have implemented is the data shown here:
