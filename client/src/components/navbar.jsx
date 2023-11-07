@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
 import logo from '../assets/logo.png';
 
 const Menu = () => (
