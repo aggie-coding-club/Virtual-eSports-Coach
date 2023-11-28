@@ -4,9 +4,7 @@ file = json.load(open('out.json','r'))
 data = file['roundResults']
 loc = []
 for round in data:
-    for player in round['playerStats']:
-        for kill in player['kills']:
-            loc.append(kill['victimLocation'])
+        loc.append(round['plantLocation'])
 x_values = [point['x'] for point in loc]
 y_values = [-point['y'] for point in loc]
 
