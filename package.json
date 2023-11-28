@@ -1,10 +1,10 @@
 {
     "dependencies": {
-      "concurrently": "^8.2.0"
+        "concurrently": "^8.2.0",
+        "react-player": "^2.13.0"
     },
     "scripts": {
-      "start": "concurrently \"cd server && node server\"  \"cd client && npm start\"",
-      "client": "cd client && npm start"
+        "start": "concurrently \"cd server && node server\"  \"cd client && npm start\"",
+        "client": "cd client && npm start"
     }
-  }
-  
+}

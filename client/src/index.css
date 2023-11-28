@@ -4,7 +4,7 @@
 
 
 :root {
-  --font-family: 'Roboto Mono', monospace;
+  --font-family: 'Poppins', monospace;
 
   --gradient-text: linear-gradient(103.22deg, #67d5fa -13.86%, #df67f4 99.55%);
   --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
@@ -17,6 +17,54 @@
 body, html {
   height: 100%;
   margin: 0;
+}
+.nav h1{
+  color: #9A26C2;
+  font-family: 'Poppins';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.navbutton{
+  border-radius: 40px;
+  background: #FF4655;
+  width: 110px;
+  height: 44px;
+}
+.navbutton p{
+  color: #FFF;
+text-align: center;
+margin-top: 12px;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.navbutton2 p{
+  color: #FFF;
+text-align: center;
+margin-top: 6px;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.navheader{
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.navbutton2{
+  border-radius: 40px;
+border: 6px solid #FF4655;
+background: rgba(255, 70, 85, 0.00);
+width: 110px;
+  height: 44px;
 }
 
 .hometitle {
@@ -399,23 +447,7 @@ font-size:50% !important;
   cursor: pointer;
 }
 
-.navbar-menu_container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
 
-  text-align: end;
-  background: #03072b;
-  padding: 2rem;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  margin-top: 1rem;
-  min-width: 210px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-}
 
 .navbar-menu_container p {
   margin: 1rem 0;

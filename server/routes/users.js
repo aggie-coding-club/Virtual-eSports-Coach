@@ -8,10 +8,10 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 router.route('/add').post((req, res) => {
-  const newUser = new User({
-    username:req.body.username,
-    phone:req.body.phone
-  });
+  const username = req.body.username;
+  const phone = req.body.phone;
+  const newUser = new User({username,phone});
+
   newUser.save()
     .then(() => res.json('User added!'))
     .catch(err => res.status(400).json('Error: ' + err));
